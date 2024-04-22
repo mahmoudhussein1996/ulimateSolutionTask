@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +12,7 @@ import 'package:task_ultimate/Orders/model/delivery_bill.dart';
 import 'package:task_ultimate/Orders/view/widgets/bill_item.dart';
 import 'package:task_ultimate/Orders/view/widgets/no_bill_item.dart';
 import 'package:task_ultimate/Shared/shared_preferances.dart';
+import 'package:task_ultimate/language/provider/app_languages.dart';
 import 'package:task_ultimate/language/view/widgets/language_dialog.dart';
 import 'package:task_ultimate/utilties/helper.dart';
 import 'package:task_ultimate/utilties/theme.dart';
@@ -25,15 +28,15 @@ class BillScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeClass.whiteColor,
-      body: Consumer<OrderProvider>(
-        builder: (context, orderProvider, _) {
+      body: Consumer2<OrderProvider, AppLanguage>(
+        builder: (context, orderProvider,appLang, _) {
           return Column(
             children: [
               Stack(children: [
                 Container(color: ThemeClass.redColor,width: double.infinity, height: 127.h,),
                 PositionedDirectional(
                     top: 0,end: 0,
-                    child: SvgPicture.asset("assets/images/ic_circle1.svg" ,width: 122.w, height: 128.h,)),
+                    child:  SvgPicture.asset("assets/images/ic_circle1.svg" ,width: 122.w, height: 128.h,)),
                 PositionedDirectional(
                   top: 50.h,end: 16.w,
                   child: Container(

@@ -34,6 +34,7 @@ class TextDefaultWidget extends StatelessWidget {
       style: TextStyle(
           fontSize: fontSize ?? 16.sp,
           fontWeight: fontWeight ?? FontWeight.w500,
+          fontFamily: "montserrat",
           color: color ?? ThemeClass.whiteColor,
           textBaseline: textBaseline,
           foreground: gradientColors,
