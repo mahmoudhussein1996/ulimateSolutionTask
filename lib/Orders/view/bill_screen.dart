@@ -36,7 +36,7 @@ class BillScreen extends StatelessWidget {
                 Container(color: ThemeClass.redColor,width: double.infinity, height: 127.h,),
                 PositionedDirectional(
                     top: 0,end: 0,
-                    child:  SvgPicture.asset("assets/images/ic_circle1.svg" ,width: 122.w, height: 128.h,)),
+                    child:  SvgPicture.asset("assets/images/ic_circle1.svg",width: 122.w, height: 128.h,)),
                 PositionedDirectional(
                   top: 50.h,end: 16.w,
                   child: Container(
