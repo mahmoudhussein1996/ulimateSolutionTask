@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:task_ultimate/Login/controller/provider/login_provider.dart';
 import 'package:task_ultimate/Login/controller/provider/state_on_login.dart';
+import 'package:task_ultimate/language/provider/app_languages.dart';
 import 'package:task_ultimate/language/view/widgets/language_dialog.dart';
 import 'package:task_ultimate/utilties/helper.dart';
 import 'package:task_ultimate/utilties/theme.dart';
@@ -33,13 +34,16 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: ThemeClass.whiteColor,
       key: _scaffoldKey,
-      body: Consumer<LoginProvider>(
-        builder: (context, loginProvider, _) {
+      body: Consumer2<LoginProvider, AppLanguage>(
+        builder: (context, loginProvider,appLang, _) {
           return Stack(
             children: [
               PositionedDirectional(
                 top: 0,end: 0,
-                  child: SvgPicture.asset("assets/images/ic_circle.svg" ,width: 122.w, height: 128.h,)),
+                  child: Transform.flip(
+                      flipY: (appLang.englishSelected || appLang.appLocal == Locale("en")) ? true : false,
+                      flipX: (appLang.arabicSelected || appLang.appLocal == Locale("ar")) ? true : false,
+                      child: SvgPicture.asset("assets/images/ic_circle.svg" ,width: 122.w, height: 128.h,))),
               PositionedDirectional(
                 top: 50.h,end: 16.w,
                 child: IconButton(icon: Icon(Icons.language, size: 28,
