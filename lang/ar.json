@@ -1,0 +1,22 @@
+{
+  "welcome_back": "مرحبًا بعودتك!",
+  "login_hint": "قم بتسجيل الدخول مرة أخرى إلى حسابك",
+  "user_id": "رقم المستخدم",
+  "password": "كلمة المرور",
+  "show_more": "أظهر المزيد",
+  "login": "تسجيل الدخول",
+  "new": "جديد",
+  "other": "أخرون",
+  "order_details": "تفاصيل الطلب",
+  "status": "حالة",
+  "total_price": "السعر الكلي",
+  "date": "تاريخ",
+  "le": "ج م",
+  "no_order": "لا توجد طلبات حتى الآن",
+  "no_order_description": "ليس لديك أي طلبات في السجل الخاص بك.",
+  "choose_language": "اختر اللغة",
+  "apply": "تطبيق",
+  "delivered": "تم التوصيل",
+  "returned": "مردود",
+  "partial_return": "مردود جزئي"
+}

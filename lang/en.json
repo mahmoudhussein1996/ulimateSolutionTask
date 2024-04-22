@@ -1,0 +1,23 @@
+{
+  "welcome_back": "Welcome Back!",
+  "login_hint": "Log back into your account",
+  "user_id": "User ID",
+  "password": "Password",
+  "show_more": "Show More",
+  "login": "Log in",
+  "new": "New",
+  "other": "Others",
+  "order_details": "Order Details",
+  "status": "Status",
+  "total_price": "Total price",
+  "date": "Date",
+  "le": "LE",
+  "no_order": "No orders yet",
+  "no_order_description": "You don't have any orders in your history.",
+  "choose_language": "Choose Language",
+  "apply": "Apply",
+  "delivered": "Delivered",
+  "delivering": "Delivering",
+  "returned": "Returned",
+  "partial_return": "Partial Return"
+}
