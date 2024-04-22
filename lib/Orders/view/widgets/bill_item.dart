@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:task_ultimate/Orders/controller/provider/order_provider.dart';
 import 'package:task_ultimate/Orders/model/delivery_bill.dart';
 import 'package:task_ultimate/Orders/view/widgets/divider_widget.dart';
+import 'package:task_ultimate/language/provider/app_languages.dart';
 import 'package:task_ultimate/utilties/helper.dart';
 import 'package:task_ultimate/utilties/theme.dart';
 import 'package:task_ultimate/utilties/widgets/default_text_widget.dart';
@@ -14,8 +15,8 @@ class BillItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<OrderProvider>(
-      builder: (context, orderProvider, _) {
+    return Consumer2<OrderProvider, AppLanguage>(
+      builder: (context, orderProvider, appLang, _) {
         return Container(
           width: double.infinity,
           height: 92.h,
@@ -101,7 +102,12 @@ class BillItem extends StatelessWidget {
               width: 44.w,
               height: 92.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(8.r), topRight: Radius.circular(8.r)),
+                borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(appLang.englishSelected ?  8.r : 0),
+                topRight: Radius.circular(appLang.englishSelected ?  8.r : 0),
+                bottomLeft: Radius.circular(appLang.arabicSelected ?  8.r : 0),
+                topLeft: Radius.circular(appLang.arabicSelected ?  8.r : 0)
+                ),
                 color: deliveryBill.deliveryStatusFlag == "1" ?
                 ThemeClass.greyColor : deliveryBill.deliveryStatusFlag == "4" ?
                 ThemeClass.greenColor: deliveryBill.deliveryStatusFlag == "3" ?
